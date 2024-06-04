@@ -22,7 +22,16 @@ const AddTodo = () => {
     ]);
     setInputValue("");
   };
-  return <div>AddTodo</div>;
+  return (
+    <div>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <button onClick={addItem}>Add</button>
+    </div>
+  );
 };
 
 export default AddTodo;
